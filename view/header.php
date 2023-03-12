@@ -53,7 +53,7 @@ session_start();
                         <li>
                             <?php
                             if (isset($_SESSION['email'])) {
-                                echo '<a href="./logout.php"> Logout ('.($_SESSION["email"]).')</a>';
+                                echo '<a href="../controller/logout.php"> Logout ('.($_SESSION["email"]).')</a>';
                             } else {
                                 echo '<a href="./login.php"> Login </a>';
                             }
@@ -85,11 +85,10 @@ session_start();
 
                                 <li class="sm-menu-link">
                                     <?php
-                                    echo ($_SESSION['email']);
                                     if (isset($_SESSION['email'])) {
-                                        echo '<a href="./logout.php"> Logout'.($_SESSION["email"]).'</a>';
+                                        echo '<a href="../controller/logout.php"> Logout'.($_SESSION["email"]).'</a>';
                                     } else {
-                                        echo '<a href="./loginRegister.php"> Login/Registration </a>';
+                                        echo '<a href="./login.php"> Login</a>';
                                     }
                                     ?>
                                 </li>

@@ -22,7 +22,7 @@
   <?php include('./header.php') ?>
   <?php 
   if(!isset($_SESSION["email"])){
-    header('location:loginRegister.php');
+    header('location:login.php');
   }
   ?>
     <!-- Hero section -->
