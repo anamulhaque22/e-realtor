@@ -1,3 +1,4 @@
+<?php include('../controller/regController.php')?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +28,7 @@
               <a href="#" id="login-btn" class="btn">Login</a>
               <a href="#" id="registration-btn" class="btn">Registration</a>
             </div>
-            <form class="row g-3 login-form">
+            <form class="row g-3 login-form" action="../controller/loginController.php" method="post">
               <div class="col-md-12">
                 <input type="email" class="form-control" id="email" placeholder="Email" />
               </div>
