@@ -53,9 +53,16 @@ session_start();
                         <li>
                             <?php
                             if (isset($_SESSION['email'])) {
-                                echo '<a href="../controller/logout.php"> Logout </a>';
+                                echo '<a href="./logout.php"> Logout ('.($_SESSION["email"]).')</a>';
                             } else {
-                                echo '<a href="./loginRegister.php"> Login/Registration </a>';
+                                echo '<a href="./login.php"> Login </a>';
+                            }
+                            ?>
+                        </li>
+                        <li>
+                            <?php
+                            if (!isset($_SESSION['email'])) {
+                                echo '<a href="./registration.php"> Registration </a>';
                             }
                             ?>
                         </li>
@@ -80,7 +87,7 @@ session_start();
                                     <?php
                                     echo ($_SESSION['email']);
                                     if (isset($_SESSION['email'])) {
-                                        echo '<a href="./logout.php"> Logout </a>';
+                                        echo '<a href="./logout.php"> Logout'.($_SESSION["email"]).'</a>';
                                     } else {
                                         echo '<a href="./loginRegister.php"> Login/Registration </a>';
                                     }

@@ -1,4 +1,4 @@
-<?php include('../controller/regController.php')?>
+
 <?php include('../controller/loginController.php')?>
 <!DOCTYPE html>
 <html lang="en">
@@ -31,13 +31,12 @@
         <div class="col-md-7">
           <div class="form-content">
             <div class="tabbed-btn d-flex justify-content-center">
-              <a href="#" id="login-btn" class="btn">Login</a>
-              <a href="#" id="registration-btn" class="btn">Registration</a>
+              <H3>Login</h3>
             </div>
             <form class="row g-3 login-form" method="post">
               <div class="col-md-12">
                 <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
-                <span class="error"><?php echo $emailErr;?></span>
+                <span class="text-danger"><?php echo $emailErr;?></span>
               </div>
               <div class="col-md-12">
                 <input type="password" class="form-control" id="password" name="password" placeholder="password*" required />
@@ -50,57 +49,13 @@
                 <input type="submit" value="Login" class="btn" name="login">
               </div>
             </form>
-            <form class="row g-3 registration-form" method="post">
-              <div class="col-md-12">
-                <input type="text" class="form-control" id="name" placeholder="Full Name" name="name" />
-              </div>
-              <div class="col-md-12">
-                <input type="email" class="form-control" id="email" placeholder="Email" name="email" />
-              </div>
-              <div class="col-md-12">
-              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone">
-              </div>
-              <div class="col-md-12">
-                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required />
-              </div>
-              <div class="col-md-12">
-                <input type="text" class="form-control" id="address" placeholder="Address" name="address" />
-              </div>
-              <div class="col-md-12 gender">
-                <span>Gender:</span>
-                <input type="radio" name="gender" value="female"><span class="me-4">Female</span>
-                <input type="radio" name="gender" value="male"><span class="me-4">Male</span>
-                <input type="radio" name="gender" value="other"><span class="me-4">Other</span>
-              </div>
-              <div class="col-12">
-                <input type="submit" value="Registration" class="btn" name="registration">
-              </div>
-            </form>
+           
           </div>
         </div>
       </div>
     </div>
   </div>
   <?php include('./footer.php') ?>
-  <script>
-    const login = document.querySelector('.login-form')
-    const registration = document.querySelector('.registration-form')
-    const loginBtn = document.querySelector('#login-btn')
-    const registrationBtn = document.querySelector('#registration-btn')
-
-    function displayLogin() {
-      login.style.transition = "3s all ease-in"
-      login.style.display = "block"
-      registration.style.display = "none"
-    }
-
-    function displayRegistration() {
-      registration.style.display = "block"
-      login.style.display = "none"
-    }
-    loginBtn.addEventListener('click', displayLogin);
-    registrationBtn.addEventListener('click', displayRegistration);
-  </script>
 
   <script src="../assets/js/bootstrap.min.js"></script>
   <script src="../assets/js/main.js"></script>

@@ -17,7 +17,7 @@
     <?php include('./header.php') ?>
 
     <!-- Hero section -->
-    <div class="hero d-flex align-items-center">
+    <div class="blog-hero hero d-flex align-items-center">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-11 col-sm-7 col-md-6 col-lg-4 col-xl-3">

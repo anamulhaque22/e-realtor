@@ -1,5 +1,5 @@
 <?php
-// require '../lib/test_input.php';
+require '../lib/test_input.php';
 $emailErr = $passwordErr = "";
 $email = $password = "";
 $isEmailValid = $isPasswordValid = false;
