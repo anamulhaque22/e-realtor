@@ -1,3 +1,6 @@
+<?php 
+  // session_start();
+  ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,8 +17,14 @@
     <title>Home | E-Realtor</title>
   </head>
   <body>
-  <?php include('./header.php') ?>
+  
 
+  <?php include('./header.php') ?>
+  <?php 
+  if(!isset($_SESSION["email"])){
+    header('location:loginRegister.php');
+  }
+  ?>
     <!-- Hero section -->
     <div class="hero d-flex align-items-center">
       <div class="container-fluid">

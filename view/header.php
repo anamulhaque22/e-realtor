@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header>
     <div class="header-top">
         <div class="container">
@@ -48,7 +51,13 @@
                             <a href="./contact.php">Contact</a>
                         </li>
                         <li>
-                            <a href="./loginRegister.php">Login/Registration</a>
+                            <?php
+                            if (isset($_SESSION['email'])) {
+                                echo '<a href="../controller/logout.php"> Logout </a>';
+                            } else {
+                                echo '<a href="./loginRegister.php"> Login/Registration </a>';
+                            }
+                            ?>
                         </li>
                     </ul>
 
@@ -68,7 +77,14 @@
                                 </li>
 
                                 <li class="sm-menu-link">
-                                    <a href="./loginRegister.php"> Login/Registration </a>
+                                    <?php
+                                    echo ($_SESSION['email']);
+                                    if (isset($_SESSION['email'])) {
+                                        echo '<a href="./logout.php"> Logout </a>';
+                                    } else {
+                                        echo '<a href="./loginRegister.php"> Login/Registration </a>';
+                                    }
+                                    ?>
                                 </li>
                             </ul>
                         </div>

@@ -1,4 +1,5 @@
 <?php include('../controller/regController.php')?>
+<?php include('../controller/loginController.php')?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +14,11 @@
   <link rel="stylesheet" href="../assets/css/regular.min.css" />
 
   <link rel="stylesheet" href="../assets/css/style.css" />
+  <style>
+    span.error {
+    transition: 0s;
+}
+  </style>
   <title>Login/Registration | E-Realtor</title>
 </head>
 
@@ -28,33 +34,46 @@
               <a href="#" id="login-btn" class="btn">Login</a>
               <a href="#" id="registration-btn" class="btn">Registration</a>
             </div>
-            <form class="row g-3 login-form" action="../controller/loginController.php" method="post">
+            <form class="row g-3 login-form" method="post">
               <div class="col-md-12">
-                <input type="email" class="form-control" id="email" placeholder="Email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Email" />
+                <span class="error"><?php echo $emailErr;?></span>
               </div>
               <div class="col-md-12">
-                <input type="password" class="form-control" id="password" placeholder="password*" required />
+                <input type="password" class="form-control" id="password" name="password" placeholder="password*" required />
+                <span class="error"><?php echo $passwordErr;?></span>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn">
+                <!-- <button type="submit" class="btn" value="login">
                   Login
-                </button>
+                </button> -->
+                <input type="submit" value="Login" class="btn" name="login">
               </div>
             </form>
-            <form class="row g-3 registration-form">
+            <form class="row g-3 registration-form" method="post">
               <div class="col-md-12">
-                <input type="text" class="form-control" id="name" placeholder="Full Name" />
+                <input type="text" class="form-control" id="name" placeholder="Full Name" name="name" />
               </div>
               <div class="col-md-12">
-                <input type="email" class="form-control" id="email" placeholder="Email" />
+                <input type="email" class="form-control" id="email" placeholder="Email" name="email" />
               </div>
               <div class="col-md-12">
-                <input type="password" class="form-control" id="password" placeholder="password*" required />
+              <input type="tel" id="phone" name="phone" class="form-control" placeholder="Phone">
+              </div>
+              <div class="col-md-12">
+                <input type="password" class="form-control" id="password" name="password" placeholder="Password" required />
+              </div>
+              <div class="col-md-12">
+                <input type="text" class="form-control" id="address" placeholder="Address" name="address" />
+              </div>
+              <div class="col-md-12 gender">
+                <span>Gender:</span>
+                <input type="radio" name="gender" value="female"><span class="me-4">Female</span>
+                <input type="radio" name="gender" value="male"><span class="me-4">Male</span>
+                <input type="radio" name="gender" value="other"><span class="me-4">Other</span>
               </div>
               <div class="col-12">
-                <button type="submit" class="btn">
-                  Registration
-                </button>
+                <input type="submit" value="Registration" class="btn" name="registration">
               </div>
             </form>
           </div>

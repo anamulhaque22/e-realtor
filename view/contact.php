@@ -15,7 +15,6 @@
   </head>
   <body>
   <?php include('./header.php') ?>
-
     <div class="contact-from">
       <div class="container">
         <div class="row align-items-centers">

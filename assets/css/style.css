@@ -341,11 +341,9 @@ form label {
 }
 .login-form {
   display: block;
-  transition: 3s all ease-in;
 }
 .registration-form {
   display: none;
-  transition: 3s all ease-in;
 }
 .tabbed-btn {
   margin-bottom: 3rem;
@@ -795,11 +793,9 @@ form label {
 }
 .login-form {
   display: block;
-  transition: 3s all ease-in;
 }
 .registration-form {
   display: none;
-  transition: 3s all ease-in;
 }
 .tabbed-btn {
   margin-bottom: 3rem;
@@ -918,4 +914,10 @@ p.location {
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   border-radius: 0 0 10px 10px;
+}
+.gender input{
+  margin-right: .5rem;
+}
+.gender span{
+  font-size: 1.5rem;
 }
