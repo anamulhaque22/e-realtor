@@ -1,7 +1,8 @@
 <?php
 require '../lib/test_input.php';
-$nameErr = $emailErr = $passwordErr = $phone = $address = $gender = "";
-$name = $email = $password = $phoneErr = $addressErr = $genderErr = "";
+include "../models/usersModel.php";
+$nameErr = $emailErr = $passwordErr = $phoneErr = $addressErr = $genderErr = "";
+$name = $email = $password = $phone = $address = $gender= "";
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["registration"])) {
     if (empty($_POST["name"])) {
         $nameErr = "Name is required";
@@ -53,4 +54,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["registration"])) {
     } else {
         $gender = test_input($_POST["gender"]);
     }
+
+    // insert user registration data 
+    if(empty($nameErr) && empty($nameErr) && empty($nameErr) && empty($nameErr) && empty($nameErr) && empty($nameErr)){
+        user($name, $email, $address, $phone, $password, $gender);
+    }
+    
+
 }

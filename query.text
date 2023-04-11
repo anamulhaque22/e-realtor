@@ -1,0 +1,10 @@
+user table creation query
+CREATE TABLE users ( 
+    user_id int NOT NULL,
+    full_name varchar(255) not null,e
+    mail varchar(255) not null,
+    phone varchar(12) not null,
+    password varchar(255) not null,
+    genger varchar(5) not null,
+    PRIMARY KEY (user_id) 
+);
