@@ -1,7 +1,7 @@
 <?php
 include '../models/dbConnection.php';
 
-function user($name, $email, $address, $phone, $password, $gender)
+function emp($name, $email, $address, $phone, $password, $gender)
 {
 
     $conn = connection();
@@ -9,7 +9,7 @@ function user($name, $email, $address, $phone, $password, $gender)
     if ($conn->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     } else {
-        $sql = "INSERT INTO users(full_name, email, phone, password, genger, address) values('$name', '$email', '$phone', '$password', '$gender', '$address')";
+        $sql = "INSERT INTO emp(full_name, email, phone, password, genger, address) values('$name', '$email', '$phone', '$password', '$gender', '$address')";
 
         if ($conn->query($sql) === TRUE) {
             $conn->close();

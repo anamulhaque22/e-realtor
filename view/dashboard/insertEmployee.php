@@ -5,13 +5,13 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="../assets/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="../assets/css/brands.min.css" />
-  <link rel="stylesheet" href="../assets/css/light.min.css" />
-  <link rel="stylesheet" href="../assets/css/regular.min.css" />
+  <link rel="stylesheet" href="../../assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../../assets/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="../../assets/css/brands.min.css" />
+  <link rel="stylesheet" href="../../assets/css/light.min.css" />
+  <link rel="stylesheet" href="../../assets/css/regular.min.css" />
 
-  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
   <style>
     span.error {
       transition: 0s;
@@ -123,7 +123,7 @@
       let queryString = formatParams(user);
       console.log(queryString)
       let xhr = new XMLHttpRequest();
-      xhr.open("POST", "../controller/regController.php", true);
+      xhr.open("POST", "../../controller/employeeController.php", true);
       xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
       xhr.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -180,9 +180,9 @@
     }
     document.getElementById("registration").addEventListener('click', sendData);
   </script>
-  <script src="../assets/js/bootstrap.min.js"></script>
-  <script src="../assets/js/jquery-3.7.0.min.js"></script>
-  <script src="../assets/js/main.js"></script>
+  <script src="../../assets/js/bootstrap.min.js"></script>
+  <script src="../../assets/js/jquery-3.7.0.min.js"></script>
+  <script src="../../assets/js/main.js"></script>
 </body>
 
 </html>

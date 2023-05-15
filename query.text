@@ -1,10 +1,13 @@
 user table creation query
 CREATE TABLE users ( 
-    user_id int NOT NULL,
+    user_id int NOT NULL AUTO_INCREMENT,
     full_name varchar(255) not null,e
     mail varchar(255) not null,
     phone varchar(12) not null,
     password varchar(255) not null,
     genger varchar(5) not null,
-    PRIMARY KEY (user_id) 
+    address varchar(100),
+    PRIMARY KEY (user_id),
 );
+
+CREATE TABLE property ( property_id int NOT NULL AUTO_INCREMENT, title varchar(255) not null, email varchar(255) not null, price varchar(12) not null, bed varchar(255) not null, wash varchar(5) not null, address varchar(100), type varchar(20) PRIMARY KEY (property_id) );

@@ -10,7 +10,7 @@ session_start();
                         <a href="./index.php" class="logo">
                             <h2>
                                 Real <br />
-                                Home
+                                Home Dashboard
                             </h2>
                         </a>
                     </div>
@@ -36,44 +36,15 @@ session_start();
 
                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0 main-menu">
                         <li>
-                            <a href="./index.php">Home</a>
-                        </li>
-                        <!-- <li>
-                            <a href="./about.php">About</a>
-                        </li> -->
-                        <!-- <li>
-                    <a href="#">Skill</a>
-                  </li> -->
-                        <li>
-                            <a href="./blogs.php">Blogs</a>
+                            <a href="./userList.php">User List</a>
                         </li>
                         <li>
-                            <a href="./contact.php">Contact</a>
-                        </li>
-                        <li><a href="./propertySell.php">For Sell</a></li>
-                        <li>
-                            <?php
-                            if (isset($_SESSION['email'])) {
-                                echo '<a href="../controller/logout.php"> Logout ('.($_SESSION["email"]).')</a>';
-                            } else {
-                                echo '<a href="./login.php"> Login </a>';
-                            }
-                            ?>
+                            <a href="./empList.php">Employee List</a>
                         </li>
                         <li>
-                            <?php
-                            if (isset($_SESSION['email'])) {
-                                echo '<a href="./editProfile.php">Edit Profile</a>';
-                            }
-                            ?>
+                            <a href="./insertEmployee.php">Insert Employee</a>
                         </li>
-                        <li>
-                            <?php
-                            if (!isset($_SESSION['email'])) {
-                                echo '<a href="./registration.php"> Registration </a>';
-                            }
-                            ?>
-                        </li>
+                        
                     </ul>
 
                 </div>

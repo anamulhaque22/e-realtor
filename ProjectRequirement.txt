@@ -1,8 +1,0 @@
-1. Layered Architecture (Controller+view)
-2. Page Layout (include/require)
-3. Validation (PHP)
-4. File I/O
-5. Session/Cookies
-6. Login/Registration Module
-7. Database Design
-8. Static Web Interfaces (All pages)
